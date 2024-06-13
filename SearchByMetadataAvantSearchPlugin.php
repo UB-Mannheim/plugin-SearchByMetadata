@@ -1,7 +1,7 @@
 <?php
 
 
-class SearchByMetadataPlugin extends Omeka_Plugin_AbstractPlugin
+class SearchByMetadataAvantSearchPlugin extends Omeka_Plugin_AbstractPlugin
 {
     protected $_hooks = array(
         'uninstall', 
@@ -80,7 +80,7 @@ class SearchByMetadataPlugin extends Omeka_Plugin_AbstractPlugin
         if (trim($text) == '' || !$elementText) return $text;
 
         $elementId = $elementText->element_id;
-        $url = url('items/browse', array(
+        $url = url('find', array(
             'advanced' => array(
                 array(
                     'element_id' => $elementId,
